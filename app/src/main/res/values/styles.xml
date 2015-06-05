@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="main_buttons_style">
+        <item name="android:width">255dp</item>
+        <item name="android:height">75dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@color/abc_search_url_text_normal</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+</resources>
