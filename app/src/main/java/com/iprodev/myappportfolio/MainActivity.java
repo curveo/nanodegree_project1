@@ -57,23 +57,7 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
 
     @Override
     public void onClick(View v) {
-        String txt = "unknown";
-        if(v == spot) {
-            txt = spot.getText().toString();
-        }
-        if(v == scores) {
-            txt = scores.getText().toString();
-        }
-        if(v == library) {
-            txt = library.getText().toString();
-        }
-        if(v == buildit) {
-            txt = buildit.getText().toString();
-        }
-        if(v == xyz) {
-            txt = xyz.getText().toString();
-        }
-
+        String txt = ((Button)v).getText().toString();
         Toast.makeText(this,getString(R.string.main_toast_string) + " " + txt, Toast.LENGTH_SHORT).show();
     }
 }
