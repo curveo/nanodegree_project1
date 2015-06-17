@@ -1,5 +1,7 @@
 package com.iprodev.myappportfolio;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -59,5 +61,10 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
     public void onClick(View v) {
         String txt = ((Button)v).getText().toString();
         Toast.makeText(this,getString(R.string.main_toast_string) + " " + txt, Toast.LENGTH_SHORT).show();
+        if(v == spot) {
+            Intent i = new Intent("com.iprodev.spotifystreamer.START_MAIN");
+//            Intent intent = new Intent().setComponent(new ComponentName("com.iprodev.spotifystreamer", "MainActivity"));
+            startActivity(i);
+        }
     }
 }
