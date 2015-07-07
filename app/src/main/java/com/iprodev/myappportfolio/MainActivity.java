@@ -59,12 +59,14 @@ public class MainActivity extends ActionBarActivity implements Button.OnClickLis
 
     @Override
     public void onClick(View v) {
+        if(v == spot) {
+//            ComponentInfo{com.iprodev.spotifystreamer/com.iprodev.spotifystreamer.MainActivity}
+//            Intent intent = new Intent().setComponent(new ComponentName("com.iprodev.spotifystreamer", "./MainActivity"));
+            Intent spotIntent = getPackageManager().getLaunchIntentForPackage("com.iprodev.spotifystreamer");
+            startActivity(spotIntent);
+            return;
+        }
         String txt = ((Button)v).getText().toString();
         Toast.makeText(this,getString(R.string.main_toast_string) + " " + txt, Toast.LENGTH_SHORT).show();
-        if(v == spot) {
-            Intent i = new Intent("com.iprodev.spotifystreamer.START_MAIN");
-//            Intent intent = new Intent().setComponent(new ComponentName("com.iprodev.spotifystreamer", "MainActivity"));
-            startActivity(i);
-        }
     }
 }
